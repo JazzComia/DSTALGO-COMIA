@@ -1,0 +1,61 @@
+//1st Problem
+Console.WriteLine("Delivery Information");
+Console.WriteLine("Enter your first name: ");
+string firstname = Console.ReadLine();
+Console.WriteLine("Enter your Last Name: ");
+string lastname = Console.ReadLine();
+Console.WriteLine("Contact Number: ");
+string contact = Console.ReadLine();
+Console.WriteLine("Enter your address: ");
+string address = Console.ReadLine();
+Console.WriteLine("Landmark: ");
+string landmark = Console.ReadLine();
+
+
+Console.WriteLine("Name: " + firstname + " " + lastname);
+Console.WriteLine("________________________________________");
+Console.WriteLine("Contact Number: " + contact);
+Console.WriteLine("________________________________________");
+Console.WriteLine("Address: " + address);
+Console.WriteLine("________________________________________");
+Console.WriteLine("Landmark: " + landmark);
+Console.WriteLine("________________________________________");
+
+//Problem number 5: Three Number Mathematical Challenge
+Console.WriteLine("Enter First Number: ");
+int first = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter Second Number: ");
+int second = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter Third Number: ");
+int third = Convert.ToInt32(Console.ReadLine());
+
+int sum = first + second + third;
+Console.WriteLine("The sum of the given numbers is: " + sum);
+Console.WriteLine("________________________________________");
+int diff = first - second - third;
+Console.WriteLine("The differenece of the three numbers is: " + diff);
+Console.WriteLine("________________________________________");
+int multiply = first * second * third;
+Console.WriteLine("The product of the three numbers is: " + multiply);
+Console.WriteLine("________________________________________");
+double divide = (double)first / second / third;
+Console.WriteLine(" The quotient of the given numbers is: " + divide);
+Console.WriteLine("________________________________________");
+
+int largest = Math.Max(first, Math.Max(second, third));
+Console.WriteLine("The largest number is: " + largest);
+Console.WriteLine("________________________________________");
+int smallest = Math.Min(first, Math.Min(second, third));
+Console.WriteLine("The smallest number is: " + smallest);
+Console.WriteLine("________________________________________");
+int range = largest - smallest;
+Console.WriteLine("The range of the two numbers is: " + range);
+Console.WriteLine("________________________________________");
+
+//Logical Operators
+bool isPositive = first > 0 && second > 0 && third > 0;
+Console.WriteLine("Numbers are positive: " + isPositive);
+bool isZero = first == 0 || second == 0 || third == 0;
+Console.WriteLine("Numbers are zero: " + isZero);
+bool isEqual = first == second && second == third;
+Console.WriteLine("Numbers are equal: " + isEqual);
