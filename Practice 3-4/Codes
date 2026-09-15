@@ -1,1 +1,237 @@
-1
+// 1 Treasure Collect
+namespace Comia_windows_forms_app_prac
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            int treasure = 1;
+
+            lstScore.Items.Clear();
+
+            while (treasure <= 10)
+            {
+                lstScore.Items.Add("Treasure " + treasure + " COLLECTED! ");
+                treasure++;
+            }
+        }
+    }
+}
+
+// 2 Guess the Number
+namespace GuessTheNumber
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuess_Click(object sender, EventArgs e)
+        {
+            int secret = 29;
+            int guess = Convert.ToInt32(txtGuess.Text);
+
+            while (guess != secret)
+            {
+                lblMessage.Text = "Wrong guess! Try again.";
+                return;
+            }
+            lblMessage.Text = "You guessed it right! The secret number is " + secret + ".";
+        }
+    }
+}
+
+// 3 Coin Collector
+namespace Coin_Collector
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // Keep clicking the button until 100
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int coins = 0;
+
+            do
+            {
+                coins += 10;
+            }
+                while (coins < 100);
+
+            lblCoins.Text = "You have collected " + coins + " coins!";
+        }
+    }
+}
+
+// 4 Defeat the Monster
+namespace Defeat_the_Monster
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnFight_Click(object sender, EventArgs e)
+        {
+            int hp = 50;
+            string result = "";
+
+            do
+            {
+                hp -= 10;
+                result += "Monster takes 10 damage! HP left: " + hp + "\n";
+            }
+            while (hp > 0);
+
+            result += "Monster defeated!";
+
+            label1.Text = result;
+        }
+    }
+}
+
+// 5 Weapons
+namespace Weapons
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void cmbWeapon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFight_Click(object sender, EventArgs e)
+        {
+            string weapon = cmbWeapon.Text;
+            switch (weapon)
+
+            {
+                case "Sword":
+                    lblResult.Text = "You attacked with a sword!";
+                    break;
+
+                case "Bow":
+                    lblResult.Text = "You attacked with a bow!";
+                    break;
+
+                case "Magic":
+                    lblResult.Text = "You attacked with magic!";
+                    break;
+
+                default:
+                    lblResult.Text = "Please select a weapon first.";
+                    break;
+            }
+        }
+    }
+}
+
+// 6 Choose a Door
+namespace Door
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            string door = cmbDoor.Text;
+
+            switch (door)
+            {
+                case "Door 1":
+                    lblResult.Text = "You found a treasure!";
+                    break;
+                case "Door 2":
+                    lblResult.Text = "A monster attacks you!";
+                    break;
+                case "Door 3":
+                    lblResult.Text = "You found a magic potion!";
+                    break;
+                default:
+                    lblResult.Text = "Please select a door first.";
+                    break;
+            }
+        }
+    }
+}
+
+// 7 Heart Collector
+namespace Heart_Collector
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnHeal_Click(object sender, EventArgs e)
+        {
+            progressBar1.Value = 0;
+
+            for (int health = 0; health <= 100; health += 20)
+            {
+                progressBar1.Value = health;
+                lblHealth.Text = "Health: " + health + "%";
+
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(300);
+            }
+            MessageBox.Show("You are fully healed!");
+        }
+    }
+}
+
+// 8 Stars Collector
+namespace Star_Collector
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnStars_Click(object sender, EventArgs e)
+        {
+            string stars = "";
+
+            for (int i = 1; i <= 10; i++)
+            {
+                stars += "*";
+            }
+            MessageBox.Show(stars, "Stars Collected");
+        }
+    }
+}
+
+
+
+
