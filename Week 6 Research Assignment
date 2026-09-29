@@ -1,0 +1,32 @@
+Provide a clear definition and overview of the following:
+
+Data Structures and Algorithms
+- Data Structure is a process to store data. Data can be stored in different structures and management.
+- Algorithm is the step by step process to solve a problem. Algorithm in a programming aspect is the step by step process
+to execute task. With a smooth algorithm, we can easily make the flow of the system faster.
+
+DSA Introduction. (n.d.). W3Schools. https://www.w3schools.com/dsa/dsa_intro.php
+
+Linear Data Structure
+- It is a type of data structure on have data elemets are arranged
+
+One-Dimension Array
+- The simplest form of array. It consistf of single row of elemets
+
+GeeksforGeeks. (2026, February 3). Introduction to linear data structures. GeeksforGeeks. https://www.geeksforgeeks.org/dsa/introduction-to-linear-data-structures/
+
+The Big O Notation
+- This is used to find the worst case scenario for algorithm. It uses a Capital Lettor O with parenthesis.
+which shows th runtime.
+
+DSA time complexity. (n.d.). W3Schools. https://www.w3schools.com/dsa/dsa_timecomplexity_theory.php
+
+Basic Searching Algorithms
+Linear Search
+- Linear Search is used toan unsorted array. It compares one by one of the item within the array elements.
+
+Binary Search
+- This is used in sorted arrays. This compares the middle element of the first array and the middle element
+will show the same output. If it is not the same, it will then search the left or right of the array.
+
+GeeksforGeeks. (2026b, March 3). Searching algorithms. GeeksforGeeks. https://www.geeksforgeeks.org/dsa/searching-algorithms/
