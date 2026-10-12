@@ -244,4 +244,227 @@ namespace WinFormsApp3
     }
 }
 
+using Microsoft.VisualBasic.Logging;
+
+namespace WinFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        int low = 1;
+        int high = 100;
+        int guess;
+        int tries;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            low = 1;
+            high = 100;
+            tries = 1;
+
+            guess = (low + high) / 2;
+            lblGuess.Text = "Is it " + guess + "?";
+        }
+
+        private void btnHigher_Click(object sender, EventArgs e)
+        {
+            low = guess + 1;
+            tries = tries + 1;
+
+            guess = (low + high) / 2;
+            lblGuess.Text = "Is it " + guess + "?";
+        }
+
+        private void btnLower_Click(object sender, EventArgs e)
+        {
+            high = guess - 1;
+            tries = tries + 1;
+
+            guess = (low + high) / 2;
+            lblGuess.Text = "Is it " + guess + "?";
+        }
+
+        private void btnCorrect_Click(object sender, EventArgs e)
+        {
+            lblGuess.Text = "Your number is " + guess + "! Got it in " + tries + " tries.";
+        }
+    }
+}
+
+QUADRATIC TIME
+
+namespace quadratic
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int n = 5;
+            lblTable.Text = "";
+
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= n; j++)
+                {
+                    lblTable.Text = lblTable.Text + (i * j) + "\t";
+                }
+
+                lblTable.Text = lblTable.Text + "\n";
+            }
+        }
+    }
+}
+
+namespace quadratic
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] numbers = { 1, 2, 3, 4 };
+            lblTable.Text = "";
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = 0; j < numbers.Length; j++)
+                {
+                    lblTable.Text = lblTable.Text + numbers[i] + " " + numbers[j] + "\n";
+                }
+            }
+        }
+
+namespace quadratic
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string[] basketball = { "Lakers", "Ginebra", "76ers" };
+            lblMatches.Text = "";
+
+            for (int i = 0; i < basketball.Length; i++)
+            {
+                for (int j = 0; j < basketball.Length; j++)
+                {
+                    if (i != j)
+                    {
+                        lblMatches.Text = lblMatches.Text + basketball[i] + " plays against " + basketball[j] + "\n";
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+EXPONENTIAL TIME
+namespace exponential
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int positions = 4;
+            int possibilities = 1;
+
+            for (int i = 0; i < positions; i++)
+            {
+                possibilities = possibilities * 10;
+            }
+
+            lblPin.Text = "Possible PINs: " + possibilities;
+        }
+    }
+}
+
+namespace exponential
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int positions = 4;
+            string correctPin = "4331";
+            int possibilities = 1;
+
+            for (int i = 0; i < positions; i++)
+            {
+                possibilities = possibilities * 10;
+            }
+
+            for (int k = 0; k < possibilities; k++)
+            {
+                string guess = k.ToString().PadLeft(positions, '0');
+
+                if (guess == correctPin)
+                {
+                    lblPin.Text = "PIN found: " + guess + "\nTries: " + (k + 1) + " out of " + possibilities;
+                    break;
+                }
+            }
+        }
+    }
+}
+
+namespace exponential
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int tosses = 3;
+            int possibilities = 1;
+
+            for (int i = 0; i < tosses; i++)
+            {
+                possibilities = possibilities * 2;
+            }
+
+            lblToss.Text = "Possible outcomes: " + possibilities;
+        }
+    }
+}
 
