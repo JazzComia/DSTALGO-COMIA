@@ -1,0 +1,247 @@
+CONSTANT TIME
+
+namespace DSTALGO_ACTIVITY
+{
+    public partial class Form1 : Form
+    {
+
+        string[] cars = { "Formula1", "Rally", "Nascar", "LeMans", "Drag", "Drifting", "Touring", "Dakar" };
+        public Form1()
+        {
+            InitializeComponent();
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int index = Convert.ToInt32(txtNumber.Text);
+
+            string value = cars[index];
+
+            lblResult.Text = "Car at index " + index + " is " + value;
+        }
+    }
+}
+
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int num1 = 12500;
+            int num2 = 12;
+
+            int product = num1 * num2;
+
+            MessageBox.Show(num1 + " x " + num2 + " = " + product);
+        }
+    }
+}
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lblCars.Text = "";
+
+            for (int i = 0; i < cars.Length; i++)
+            {
+                lblCars.Text = lblCars.Text + cars[i] + "\n";
+            }
+        }
+    }
+}
+
+LINEAR TIME
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        string[] cars = { "Formula1", "Rally", "Nascar", "LeMans", "Drag", "Drifting", "Touring", "Dakar" };
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lblCars.Text = "";
+
+            for (int i = 0; i < cars.Length; i++)
+            {
+                lblCars.Text = lblCars.Text + cars[i] + "\n";
+            }
+        }
+    }
+}
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        string[] cars = { "Formula1", "Rally", "Nascar", "LeMans", "Drag", "Drifting", "Touring", "Dakar" };
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach(string car in cars)
+            {
+                if (car == "LeMans")
+                {
+                    MessageBox.Show("LeMans Car is used for 24Hrs Racing");
+                }
+            }
+        }
+    }
+}
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] numbers = { 15, 25, 29, 50, 12 };
+            int max = numbers[0];
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                }
+            }
+
+            lblMax.Text = "Largest number is " + max;
+
+        }
+    }
+}
+
+LOGARITHMIC TIME
+namespace WinFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int number = 625;
+            int steps = 0;
+
+            lblDivide.Text = "";
+
+            while (number > 1)
+            {
+                number = number / 5;
+                steps = steps + 1;
+                lblDivide.Text = lblDivide.Text + "Step " + steps + ": " + number + "\n";
+            }
+
+            lblDivide.Text = lblDivide.Text + "Total steps: " + steps;
+        }
+    }
+}
+
+namespace WinFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] numbers = { 40, 45, 50, 55, 60, 65, 70, 75, 80 };
+
+            int left = 0;
+            int right = numbers.Length - 1;
+
+            lblSearch.Text = "Not found";
+
+            while (left <= right)
+            {
+                int middle = (left + right) / 2;
+
+                if (numbers[middle] == 60)
+                {
+                    lblSearch.Text = "Found at index " + middle;
+                    break;
+                }
+                else if (numbers[middle] < 60)
+                {
+                    left = middle + 1;
+                }
+                else
+                {
+                    right = middle - 1;
+                }
+            }
+        }
+    }
+}
+
+
